@@ -10,6 +10,8 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CL
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /v "full" /t REG_SZ /d "%CD%\PopCatClosed.ico,0" /f
 
-:: перезапуск проводника для обновления рабочего стола
-taskkill /f /im explorer.exe
-start explorer.exe
+:: команда для очистки кэша иконок в Windows 7
+ie4uinit.exe -ClearIconCache
+
+:: команда для очистки кэша иконок в Windows 10 и 11
+ie4uinit.exe -show
