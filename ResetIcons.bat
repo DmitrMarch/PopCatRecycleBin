@@ -1,4 +1,4 @@
-:: возвращение дефолтной корзины
+:: РІРѕР·РІСЂР°С‰РµРЅРёРµ РґРµС„РѕР»С‚РЅРѕР№ РєРѕСЂР·РёРЅС‹
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /ve /t REG_EXPAND_SZ /d "%SystemRoot%\\System32\\imageres.dll","-55" /f
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
@@ -6,6 +6,6 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CL
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /v "full" /t REG_EXPAND_SZ /d "%SystemRoot%\\System32\\imageres.dll","-54" /f
 
-:: перезапуск проводника для обновления рабочего стола
+:: РїРµСЂРµР·Р°РїСѓСЃРє РїСЂРѕРІРѕРґРЅРёРєР° РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°
 taskkill /f /im explorer.exe
 start explorer.exe

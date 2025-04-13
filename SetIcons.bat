@@ -1,15 +1,15 @@
-:: изменение иконки текущей корзины
+:: РёР·РјРµРЅРµРЅРёРµ РёРєРѕРЅРєРё С‚РµРєСѓС‰РµР№ РєРѕСЂР·РёРЅС‹
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /ve /t REG_SZ /d "%CD%\PopCatOpen.ico,0" /f
 
-:: изменение иконки пустой корзины
+:: РёР·РјРµРЅРµРЅРёРµ РёРєРѕРЅРєРё РїСѓСЃС‚РѕР№ РєРѕСЂР·РёРЅС‹
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /v "empty" /t REG_SZ /d "%CD%\PopCatOpen.ico,0" /f
 
-:: изменение иконки заполненной корзины
+:: РёР·РјРµРЅРµРЅРёРµ РёРєРѕРЅРєРё Р·Р°РїРѕР»РЅРµРЅРЅРѕР№ РєРѕСЂР·РёРЅС‹
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon"^
  /v "full" /t REG_SZ /d "%CD%\PopCatClosed.ico,0" /f
 
-:: перезапуск проводника для обновления рабочего стола
+:: РїРµСЂРµР·Р°РїСѓСЃРє РїСЂРѕРІРѕРґРЅРёРєР° РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°
 taskkill /f /im explorer.exe
 start explorer.exe
